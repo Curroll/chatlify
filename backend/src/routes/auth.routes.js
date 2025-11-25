@@ -2,6 +2,7 @@ import express from "express";
 import {login, logout, signUp, updateUser } from "../controller/auth.controller.js";
 import { protectedRoute } from "../middleware/auth.middleware.js";
 import { arjectProtection } from "../middleware/arcjet.middleware.js";
+import { getAllContacts } from "../controller/message.controller.js";
 
 const router = express.Router();
 router.use(arjectProtection)

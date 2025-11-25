@@ -18,10 +18,12 @@ const messageSchema = new mongoose.Schema(
       type: String,
       trim: true,
       default: "",
+      maxlength: 2000,
     },
-    image:{
-        type: String,
-        default: null,
+
+    image: {
+      type: String,
+      default: null,
     },
 
     messageType: {
@@ -30,16 +32,19 @@ const messageSchema = new mongoose.Schema(
       default: "text",
     },
 
+    // Optional file/video/audio attachment
     attachmentUrl: {
       type: String,
       default: null,
     },
 
+    // Mark message as read by receiver
     isRead: {
       type: Boolean,
       default: false,
     },
 
+    // Mark if delivered (useful for socket.io delivery status)
     delivered: {
       type: Boolean,
       default: false,

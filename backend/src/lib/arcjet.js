@@ -9,7 +9,7 @@ const aj = arcjet({
 
     // Bot + Spoofed Bot detection
     detectBot({
-      mode: "LIVE",
+      mode: "DRY_RUN",
       blockSpoofed: true,
       allow: [
         "CATEGORY:SEARCH_ENGINE", // Googlebot, Bingbot, etc.
